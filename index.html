@@ -112,7 +112,23 @@
       max-width: 300px;
     }
   }
-  
+  .ai-filter {
+  margin: 20px 0;
+}
+
+.ai-filter input {
+  padding: 8px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.ai-filter button {
+  padding: 8px 12px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 </style>
 
 </head>
@@ -137,6 +153,11 @@
     <option value="40001-80000">₹40,001 – ₹80,000</option>
     <option value="80001-150000">Above ₹80,000</option>
   </select>
+</div>
+
+<div class="ai-filter">
+  <input type="text" id="aiInput" placeholder="Ask for a phone... (e.g. Best OnePlus under 50k with good battery)">
+  <button onclick="applyAIFilter()">Search</button>
 </div>
 
 
@@ -312,6 +333,37 @@
 
     // Initial render
     renderPhones(phones);
+  function applyAIFilter() {
+  const query = document.getElementById("aiInput").value.toLowerCase();
+
+  let filtered = phones;
+
+  // Brand filtering
+  const brands = ["apple", "samsung", "google", "oneplus", "nothing", "realme", "iqoo"];
+  const matchedBrand = brands.find(b => query.includes(b));
+  if (matchedBrand) {
+    filtered = filtered.filter(p => p.brand.toLowerCase() === matchedBrand);
+  }
+
+  // Price filtering
+  const priceMatch = query.match(/(\d{2,6})\s?(k|₹|rs)?/);
+  if (priceMatch) {
+    const priceLimit = parseInt(priceMatch[1].replace(/,/g, ""));
+    filtered = filtered.filter(p => p.price <= priceLimit);
+  }
+
+  // Camera priority (very basic check)
+  if (query.includes("camera")) {
+    filtered = filtered.sort((a, b) => {
+      const aMP = parseInt(a.specs.match(/(\d+)MP/)?.[1] || 0);
+      const bMP = parseInt(b.specs.match(/(\d+)MP/)?.[1] || 0);
+      return bMP - aMP;
+    });
+  }
+
+  renderPhones(filtered);
+}
+
   </script>
 </body>
 
