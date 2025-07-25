@@ -134,98 +134,68 @@
     </select>
   </div>
 
-  <div class="phone-list" id="phoneList">
-
-    <div class="phone-card">
-  <h3>iPhone 15 Pro</h3>
-  <p><strong>Brand:</strong> Apple</p>
-  <p><strong>RAM:</strong> 8 GB</p>
-  <p><strong>Storage:</strong> 256 GB</p>
-  <p><strong>Processor:</strong> A17 Pro</p>
-  <p><strong>Battery:</strong> 3274 mAh</p>
-  <p><strong>Price:</strong> ₹1,34,900</p>
-  <a class="buy-link" href="https://www.apple.com/in/iphone-15-pro/" target="_blank">Buy Now</a>
-</div>
-
-<div class="phone-card">
-  <h3>Samsung Galaxy S24 Ultra</h3>
-  <p><strong>Brand:</strong> Samsung</p>
-  <p><strong>RAM:</strong> 12 GB</p>
-  <p><strong>Storage:</strong> 256 GB</p>
-  <p><strong>Processor:</strong> Snapdragon 8 Gen 3</p>
-  <p><strong>Battery:</strong> 5000 mAh</p>
-  <p><strong>Price:</strong> ₹1,29,999</p>
-  <a class="buy-link" href="https://www.samsung.com/in/smartphones/galaxy-s24-ultra/" target="_blank">Buy Now</a>
-</div>
-
-<div class="phone-card">
-  <h3>Google Pixel 8 Pro</h3>
-  <p><strong>Brand:</strong> Google</p>
-  <p><strong>RAM:</strong> 12 GB</p>
-  <p><strong>Storage:</strong> 128 GB</p>
-  <p><strong>Processor:</strong> Google Tensor G3</p>
-  <p><strong>Battery:</strong> 5050 mAh</p>
-  <p><strong>Price:</strong> ₹1,06,999</p>
-  <a class="buy-link" href="https://store.google.com/in/product/pixel_8_pro" target="_blank">Buy Now</a>
-</div>
-
-<div class="phone-card">
-  <h3>OnePlus 12</h3>
-  <p><strong>Brand:</strong> OnePlus</p>
-  <p><strong>RAM:</strong> 16 GB</p>
-  <p><strong>Storage:</strong> 512 GB</p>
-  <p><strong>Processor:</strong> Snapdragon 8 Gen 3</p>
-  <p><strong>Battery:</strong> 5400 mAh</p>
-  <p><strong>Price:</strong> ₹64,999</p>
-  <a class="buy-link" href="https://www.oneplus.in/oneplus-12" target="_blank">Buy Now</a>
-</div>
-
-<div class="phone-card">
-  <h3>Nothing Phone (2)</h3>
-  <p><strong>Brand:</strong> Nothing</p>
-  <p><strong>RAM:</strong> 12 GB</p>
-  <p><strong>Storage:</strong> 256 GB</p>
-  <p><strong>Processor:</strong> Snapdragon 8+ Gen 1</p>
-  <p><strong>Battery:</strong> 4700 mAh</p>
-  <p><strong>Price:</strong> ₹44,999</p>
-  <a class="buy-link" href="https://in.nothing.tech/products/phone-2" target="_blank">Buy Now</a>
-</div>
-
-  </div>
+  <div class="phone-list" id="phoneList">  </div>
 
   <script>
     const phones = [
+  {
+    name: "iPhone 15 Pro",
+    brand: "Apple",
+    price: 134900,
+    specs: "8GB RAM, 256GB Storage, A17 Pro Chip, 48MP Camera",
+    link: "https://www.apple.com/in/iphone-15-pro/"
+  },
+  {
+    name: "Samsung Galaxy S24 Ultra",
+    brand: "Samsung",
+    price: 129999,
+    specs: "12GB RAM, 256GB Storage, Snapdragon 8 Gen 3, 200MP Camera",
+    link: "https://www.samsung.com/in/smartphones/galaxy-s24-ultra/"
+  },
+  {
+    name: "Google Pixel 8 Pro",
+    brand: "Google",
+    price: 106999,
+    specs: "12GB RAM, 128GB Storage, Tensor G3, 50MP Camera",
+    link: "https://store.google.com/in/product/pixel_8_pro"
+  },
+  {
+    name: "OnePlus 12",
+    brand: "OnePlus",
+    price: 64999,
+    specs: "16GB RAM, 512GB Storage, Snapdragon 8 Gen 3, 50MP Camera",
+    link: "https://www.oneplus.in/oneplus-12"
+  },
+  {
+    name: "Nothing Phone (2)",
+    brand: "Nothing",
+    price: 44999,
+    specs: "12GB RAM, 256GB Storage, Snapdragon 8+ Gen 1, 50MP Camera",
+    link: "https://in.nothing.tech/products/phone-2"
+  },
+  {
+    name: "Realme GT 6",
+    brand: "Realme",
+    price: 34999,
+    specs: "12GB RAM, 256GB Storage, Snapdragon 8s Gen 3, 50MP Camera",
+    link: "https://www.realme.com/in/realme-gt-6"
+  },
+  {
+    name: "iQOO Neo 9 Pro",
+    brand: "iQOO",
+    price: 36999,
+    specs: "12GB RAM, 256GB Storage, Snapdragon 8 Gen 2, 50MP Camera",
+    link: "https://www.iqoo.com/in/products/neo9pro"
+  },
+  {
+    name: "Samsung Galaxy A55",
+    brand: "Samsung",
+    price: 39999,
+    specs: "8GB RAM, 128GB Storage, Exynos 1480, 50MP Camera",
+    link: "https://www.samsung.com/in/smartphones/galaxy-a55-5g/"
+  }
+];
 
-    
-      {
-        name: "Phone Alpha",
-        brand: "BrandX",
-        price: 350,
-        specs: "4GB RAM, 64GB Storage, 12MP Camera",
-        link: "https://affiliate.link/phoneAlpha"
-      },
-      {
-        name: "Phone Beta",
-        brand: "BrandY",
-        price: 600,
-        specs: "6GB RAM, 128GB Storage, 48MP Camera",
-        link: "https://affiliate.link/phoneBeta"
-      },
-      {
-        name: "Phone Gamma",
-        brand: "BrandZ",
-        price: 800,
-        specs: "8GB RAM, 256GB Storage, 64MP Camera",
-        link: "https://affiliate.link/phoneGamma"
-      },
-      {
-        name: "Phone Delta",
-        brand: "BrandX",
-        price: 450,
-        specs: "6GB RAM, 128GB Storage, 24MP Camera",
-        link: "https://affiliate.link/phoneDelta"
-      }
-    ];
 
     const phoneList = document.getElementById("phoneList");
     const brandFilter = document.getElementById("brandFilter");
