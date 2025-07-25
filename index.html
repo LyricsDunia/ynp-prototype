@@ -142,64 +142,121 @@
   <div class="phone-list" id="phoneList">  </div>
 
   <script>
-    const phones = [
+   const phones = [
   {
     name: "iPhone 15 Pro",
     brand: "Apple",
     price: 134900,
     specs: "8GB RAM, 256GB Storage, A17 Pro Chip, 48MP Camera",
-    link: "https://www.apple.com/in/iphone-15-pro/"
+    flipkart: {
+      price: 134900,
+      link: "https://www.flipkart.com/apple-iphone-15-pro/p/itm5ddf0c93580a8"
+    },
+    amazon: {
+      price: 134900,
+      link: "https://www.amazon.in/dp/B0CHX2F5QT"
+    }
   },
   {
     name: "Samsung Galaxy S24 Ultra",
     brand: "Samsung",
     price: 129999,
     specs: "12GB RAM, 256GB Storage, Snapdragon 8 Gen 3, 200MP Camera",
-    link: "https://www.samsung.com/in/smartphones/galaxy-s24-ultra/"
+    flipkart: {
+      price: 129999,
+      link: "https://www.flipkart.com/samsung-galaxy-s24-ultra/p/itm21edc4fb8d3a6"
+    },
+    amazon: {
+      price: 129999,
+      link: "https://www.amazon.in/dp/B0CR1J7MKQ"
+    }
   },
   {
     name: "Google Pixel 8 Pro",
     brand: "Google",
     price: 106999,
     specs: "12GB RAM, 128GB Storage, Tensor G3, 50MP Camera",
-    link: "https://store.google.com/in/product/pixel_8_pro"
+    flipkart: {
+      price: 106999,
+      link: "https://www.flipkart.com/google-pixel-8-pro/p/itm5aeea46c1390e"
+    },
+    amazon: {
+      price: 106999,
+      link: "https://www.amazon.in/dp/B0CGV1XTK4"
+    }
   },
   {
     name: "OnePlus 12",
     brand: "OnePlus",
     price: 64999,
     specs: "16GB RAM, 512GB Storage, Snapdragon 8 Gen 3, 50MP Camera",
-    link: "https://www.oneplus.in/oneplus-12"
+    flipkart: {
+      price: 64999,
+      link: "https://www.flipkart.com/oneplus-12/p/itm2f91a46d8a9cf"
+    },
+    amazon: {
+      price: 64999,
+      link: "https://www.amazon.in/dp/B0CQTB6M1C"
+    }
   },
   {
     name: "Nothing Phone (2)",
     brand: "Nothing",
     price: 44999,
     specs: "12GB RAM, 256GB Storage, Snapdragon 8+ Gen 1, 50MP Camera",
-    link: "https://in.nothing.tech/products/phone-2"
+    flipkart: {
+      price: 44999,
+      link: "https://www.flipkart.com/nothing-phone-2/p/itm9d720b90e1caa"
+    },
+    amazon: {
+      price: 44999,
+      link: "https://www.amazon.in/dp/B0CBW92KQJ"
+    }
   },
   {
     name: "Realme GT 6",
     brand: "Realme",
     price: 34999,
     specs: "12GB RAM, 256GB Storage, Snapdragon 8s Gen 3, 50MP Camera",
-    link: "https://www.realme.com/in/realme-gt-6"
+    flipkart: {
+      price: 34999,
+      link: "https://www.flipkart.com/realme-gt-6/p/itm99ef1fcf2e29b"
+    },
+    amazon: {
+      price: 34999,
+      link: "https://www.amazon.in/dp/B0D2C3V7MQ"
+    }
   },
   {
     name: "iQOO Neo 9 Pro",
     brand: "iQOO",
     price: 36999,
     specs: "12GB RAM, 256GB Storage, Snapdragon 8 Gen 2, 50MP Camera",
-    link: "https://www.iqoo.com/in/products/neo9pro"
+    flipkart: {
+      price: 36999,
+      link: "https://www.flipkart.com/iqoo-neo-9-pro/p/itm833aa8b8fd1d2"
+    },
+    amazon: {
+      price: 36999,
+      link: "https://www.amazon.in/dp/B0CTQG9DBN"
+    }
   },
   {
     name: "Samsung Galaxy A55",
     brand: "Samsung",
     price: 39999,
     specs: "8GB RAM, 128GB Storage, Exynos 1480, 50MP Camera",
-    link: "https://www.samsung.com/in/smartphones/galaxy-a55-5g/"
+    flipkart: {
+      price: 39999,
+      link: "https://www.flipkart.com/samsung-galaxy-a55-5g/p/itm8b9fc30aa5d56"
+    },
+    amazon: {
+      price: 39999,
+      link: "https://www.amazon.in/dp/B0CWG9K62H"
+    }
   }
 ];
+
 
 
     const phoneList = document.getElementById("phoneList");
@@ -207,24 +264,29 @@
     const priceFilter = document.getElementById("priceFilter");
 
     function renderPhones(filteredPhones) {
-      phoneList.innerHTML = "";
-      if (filteredPhones.length === 0) {
-        phoneList.innerHTML = "<p>No phones match your filters.</p>";
-        return;
-      }
-      filteredPhones.forEach(phone => {
-        const card = document.createElement("div");
-        card.className = "phone-card";
-        card.innerHTML = `
-          <h3>${phone.name}</h3>
-          <p><strong>Brand:</strong> ₹${phone.brand}</p>
-          <p><strong>Price:</strong> ₹${phone.price.toLocaleString("en-IN")}</p>
-          <p><strong>Specs:</strong> ₹${phone.specs}</p>
-          <a href="${phone.link}" target="_blank" class="buy-link">Buy Now</a>
-        `;
-        phoneList.appendChild(card);
-      });
-    }
+  phoneList.innerHTML = "";
+  if (filteredPhones.length === 0) {
+    phoneList.innerHTML = "<p>No phones match your filters.</p>";
+    return;
+  }
+
+  filteredPhones.forEach(phone => {
+    const card = document.createElement("div");
+    card.className = "phone-card";
+    card.innerHTML = `
+      <h3>${phone.name}</h3>
+      <p><strong>Brand:</strong> ${phone.brand}</p>
+      <p><strong>Specs:</strong> ${phone.specs}</p>
+      <p><strong>Price:</strong> ₹${phone.price.toLocaleString("en-IN")}</p>
+      <div class="buy-links">
+        <a href="${phone.flipkart.link}" target="_blank" class="buy-link">Flipkart: ₹${phone.flipkart.price.toLocaleString("en-IN")}</a><br/>
+        <a href="${phone.amazon.link}" target="_blank" class="buy-link">Amazon: ₹${phone.amazon.price.toLocaleString("en-IN")}</a>
+      </div>
+    `;
+    phoneList.appendChild(card);
+  });
+}
+
 
     function filterPhones() {
       const brand = brandFilter.value;
