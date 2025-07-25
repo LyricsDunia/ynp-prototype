@@ -218,7 +218,7 @@
         card.innerHTML = `
           <h3>${phone.name}</h3>
           <p><strong>Brand:</strong> ${phone.brand}</p>
-          <p><strong>Price:</strong> $${phone.price}</p>
+          <p><strong>Price:</strong> ₹${phone.price.toLocaleString("en-IN")}</p>
           <p><strong>Specs:</strong> ${phone.specs}</p>
           <a href="${phone.link}" target="_blank" class="buy-link">Buy Now</a>
         `;
