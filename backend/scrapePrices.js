@@ -18,6 +18,11 @@ async function scrapePrices() {
       flipkartUrl: 'https://www.flipkart.com/samsung-galaxy-s24-ultra-5g-titanium-gray-256-gb/p/itm12ef5ea0212ed?pid=MOBGX2F3RQKKKTAW&lid=LSTMOBGX2F3RQKKKTAWNKBMGS&marketplace=FLIPKART&q=s24+ultra&store=tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=organic&iid=c774c0db-d43e-47da-a7e4-90bc5a2b95b4.MOBGX2F3RQKKKTAW.SEARCH&ppt=pp&ppn=pp&ssid=gssspz4l4w0000001753478993977&qH=9645cd762e4dc77e',
     },
     // Add more phones
+    {
+      name: 'iPhone 16 Pro',
+      amazonUrl: 'https://www.amazon.in/iPhone-16-Pro-Max-256/dp/B0DGJJM5HZ/ref=sr_1_44?crid=2FVLNR88WAIRT&dib=eyJ2IjoiMSJ9.X0imLW2SDkCPEex-H8sO_UUhFe7_OP64hBIHTUCoJVEkzmc2uLVs5LV_3us-R1hfnrXZPkDO8mnSgAFua1FYYMC1dIqVUcNwGu0bpS-mAW6ddYMTDtwAVe-QdE6ggEq5ixHQ7236fTKKOHbHb4McgYhb7aTQPTpvJlZIF2lG2xscK_ekaBGPSMYCkI6yyRkc.EmLe6_tUPo2fNuffj6x2Pwdh8hZNCJnMfhXPETHd4Cw&dib_tag=se&keywords=iphone%2B15%2Bpro&qid=1753484753&sprefix=iphone%2B15%2Bpro%2Caps%2C151&sr=8-44&xpid=EkzhF7wJvnAxM&th=1',
+      flipkartUrl: 'https://www.flipkart.com/apple-iphone-16-pro-desert-titanium-256-gb/p/itm4f25cec0bd003?pid=MOBH4DQFEZFXPGNJ&lid=LSTMOBH4DQFEZFXPGNJV4UWQH&marketplace=FLIPKART&q=iphone+16+pro&store=tyy%2F4io&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=5ca26218-ca89-45a2-8cc9-8bf91fe2a61f.MOBH4DQFEZFXPGNJ.SEARCH&ppt=sp&ppn=sp&ssid=9rv2qdskbk0000001753484787911&qH=6f0b50cc832ce851',
+    },
   ];
 
   for (const phone of phones) {
