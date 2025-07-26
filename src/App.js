@@ -37,8 +37,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white font-serif">
-      <header className="bg-ynpblue text-white p-4 text-center">
-        <h1 className="text-2xl font-bold">YNP: Your Next Phone</h1>
+      <header className="bg-ynpblue text-white p-6 shadow-md text-center">
+        <h1 className="text-3xl font-bold">YNP: Your Next Phone</h1>
+        <p className="text-lg mt-2 font-light">Find Your Perfect Phone</p>
+        <p className="text-md text-blue-100 mt-1">Smart recommendations based on your budget and features</p>
+
       </header>
 
       <section className="py-12 px-4">
