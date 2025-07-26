@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './firebase';
-import './App.css';
+import './index.css';
 
 function App() {
   const [phones, setPhones] = useState([]);
