@@ -1,5 +1,5 @@
 require('dotenv').config();
-     const { OpenAI } = require('@openai/openai');
+     const { OpenAI } = require('openai');
      const { Octokit } = require('@octokit/core');
 
      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -28,3 +28,11 @@ require('dotenv').config();
            pull_number: prNumber,
            body: description,
          });
+
+         console.log(`Updated PR #${prNumber} with description: ${description}`);
+       } catch (error) {
+         console.error('Error generating PR description:', error);
+       }
+     }
+
+     generatePRDescription(1).catch(console.error);
